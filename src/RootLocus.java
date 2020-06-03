@@ -1,3 +1,5 @@
+import javafx.scene.shape.ArcTo;
+
 public class RootLocus {
 
     private int[][] poles;
@@ -101,12 +103,19 @@ public class RootLocus {
         return asymptotesAngles;
     }
 
-    public void print(){
-        System.out.println("The Poles are " + poles[0][0] + ", " + poles[1][0] + ", " + poles[2][0] + " ± " + poles[2][1] + "i");
-        System.out.println("Angles of Asymptotes are " + asymptotesAngles[0] + ", " + asymptotesAngles[1] + ", " + asymptotesAngles[2] + ", " + asymptotesAngles[3]);
-        System.out.println("The Centroid is " + centroid);
-        System.out.println("Breakaway point is " + breakaway);
-        System.out.println("Angle of Departure is " + departureAngle);
-        System.out.println("Intersect with imaginary axis in ±" + pointImaginaryAxis + "i");
+    public String print(){
+        String toReturn = "";
+        toReturn += "The Poles are " + poles[0][0] + ", " + poles[1][0] + ", " + poles[2][0] + " ± " + poles[2][1] + "i";
+        toReturn += "\r\n";
+        toReturn += "Angles of Asymptotes are " + asymptotesAngles[0] + ", " + asymptotesAngles[1] + ", " + asymptotesAngles[2] + ", " + asymptotesAngles[3];
+        toReturn += "\r\n";
+        toReturn += "The Centroid is " + centroid;
+        toReturn += "\r\n";
+        toReturn += "Breakaway point is " + breakaway;
+        toReturn += "\r\n";
+        toReturn += "Angle of Departure is " + departureAngle;
+        toReturn += "\r\n";
+        toReturn += "Intersect with imaginary axis in ±" + pointImaginaryAxis + "i";
+        return toReturn;
     }
 }

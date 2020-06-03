@@ -90,10 +90,10 @@ public class GUI extends JPanel{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         int[][] poles = {{0,0},{-25,0},{-50,10},{-50,-10}};
         RootLocus rl = new RootLocus(poles);
-        rl.print();
         frame.add(new GUI(rl));
         frame.setBounds(0,0,Toolkit.getDefaultToolkit().getScreenSize().width,Toolkit.getDefaultToolkit().getScreenSize().height);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setVisible(true);
+        JOptionPane.showMessageDialog(frame,rl.print());
     }
 }
